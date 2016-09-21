@@ -13,6 +13,7 @@
 		074601061D92A23300870283 /* GildedRose.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074600F41D929BD800870283 /* GildedRose.swift */; };
 		074601071D92A25700870283 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074600F51D929BD800870283 /* Item.swift */; };
 		074601091D92A26500870283 /* GildedRose.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074600F41D929BD800870283 /* GildedRose.swift */; };
+		0746010D1D93416100870283 /* out.gm in Resources */ = {isa = PBXBuildFile; fileRef = 0746010C1D93416100870283 /* out.gm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -35,6 +36,7 @@
 		074600FC1D92A1B500870283 /* GildedRoseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GildedRoseTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		074600FE1D92A1B500870283 /* GildedRoseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GildedRoseTests.swift; sourceTree = "<group>"; };
 		074601001D92A1B500870283 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0746010C1D93416100870283 /* out.gm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = out.gm; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +88,7 @@
 		074600FD1D92A1B500870283 /* GildedRoseTests */ = {
 			isa = PBXGroup;
 			children = (
+				0746010C1D93416100870283 /* out.gm */,
 				074600FE1D92A1B500870283 /* GildedRoseTests.swift */,
 				074601001D92A1B500870283 /* Info.plist */,
 			);
@@ -172,6 +175,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0746010D1D93416100870283 /* out.gm in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
