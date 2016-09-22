@@ -51,7 +51,9 @@ class GildedRoseTests: XCTestCase {
       app.updateQuality()
     }
 
-    XCTAssertEqual(expectedValue, runContent)
+    for pair in zip(expectedValue, runContent) {
+      XCTAssertEqual(pair.0, pair.1)
+    }
   }
 
   func testSellDateDecrements() {
