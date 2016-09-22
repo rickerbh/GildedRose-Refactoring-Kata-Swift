@@ -16,20 +16,10 @@ public class GildedRose {
         if items[i].name == "Aged Brie" {
           incrementQuality(items[i])
         } else {
-          processExpiredItem(items[i])
+          itemBehaviour.processExpiredItem(items[i])
         }
       }
     }
-  }
-
-  internal func decrementQuality(_ item: Item) {
-    guard item.quality > 0 else {
-      return
-    }
-    guard item.name != "Sulfuras, Hand of Ragnaros" else {
-      return
-    }
-    item.quality = item.quality - 1
   }
 
   internal func incrementQuality(_ item: Item) {
@@ -39,19 +29,4 @@ public class GildedRose {
     item.quality = item.quality + 1
   }
 
-  internal func processExpiredItem(_ item: Item) {
-    guard item.sellIn < 0 else {
-      return
-    }
-
-    if item.name == "Aged Brie" {
-      incrementQuality(item)
-      incrementQuality(item)
-    } else if item.name == "Backstage passes to a TAFKAL80ETC concert" {
-      item.quality = 0
-    } else {
-      decrementQuality(item)
-    }
-  }
-  
 }

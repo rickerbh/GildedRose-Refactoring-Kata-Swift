@@ -56,27 +56,6 @@ class GildedRoseTests: XCTestCase {
     }
   }
 
-  func testQualityIsDecremented() {
-    let vest = Item(name: "+5 Dexterity Vest", sellIn: 10, quality: 20)
-    let app = GildedRose(items: [])
-    app.decrementQuality(vest)
-    XCTAssertEqual(19, vest.quality)
-  }
-
-  func testQualityNeverLessThan0() {
-    let vest = Item(name: "+5 Dexterity Vest", sellIn: 10, quality: 0)
-    let app = GildedRose(items: [])
-    app.decrementQuality(vest)
-    XCTAssertEqual(0, vest.quality)
-  }
-
-  func testSulfurasQualityNeverDecrements() {
-    let sulfuras = Item(name: "Sulfuras, Hand of Ragnaros", sellIn: -1, quality: 80)
-    let app = GildedRose(items: [])
-    app.decrementQuality(sulfuras)
-    XCTAssertEqual(80, sulfuras.quality)
-  }
-
   func testQualityIsIncremented() {
     let brie = Item(name: "Aged Brie", sellIn: 2, quality: 0)
     let app = GildedRose(items: [])
@@ -89,20 +68,6 @@ class GildedRoseTests: XCTestCase {
     let app = GildedRose(items: [])
     app.incrementQuality(brie)
     XCTAssertEqual(50, brie.quality)
-  }
-
-  func testPostSaleDateBrieIncementsQuality() {
-    let brie = Item(name: "Aged Brie", sellIn: -1, quality: 0)
-    let app = GildedRose(items: [])
-    app.processExpiredItem(brie)
-    XCTAssertEqual(2, brie.quality)
-  }
-
-  func testPostSaleDateTicketsHave0Quality() {
-    let tickets = Item(name: "Backstage passes to a TAFKAL80ETC concert", sellIn: -1, quality: 20)
-    let app = GildedRose(items: [])
-    app.processExpiredItem(tickets)
-    XCTAssertEqual(0, tickets.quality)
   }
 
 }
