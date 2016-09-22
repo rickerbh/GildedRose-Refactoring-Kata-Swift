@@ -15,4 +15,12 @@ class SulfurasBehaviourTests: XCTestCase {
     behaviour.updateQualityPreDateChange(item)
     XCTAssertEqual(80, item.quality)
   }
+
+  func testDecrementDayDoesntChangeDate() {
+    let item = Item(name: "Sulfuras, Hand of Ragnaros", sellIn: 15, quality: 80)
+    let behaviour = SulfurasBehaviour()
+    behaviour.decrementSellDate(item)
+    XCTAssertEqual(15, item.sellIn)
+  }
+
 }

@@ -12,4 +12,9 @@ class SulfurasBehaviour: ItemBehaviour {
   override func updateQualityPreDateChange(_ item: Item) {
     return
   }
+
+  override func decrementSellDate(_ item: Item) {
+    return
+  }
+
 }

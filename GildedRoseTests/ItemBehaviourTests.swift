@@ -33,4 +33,11 @@ class ItemBehaviourTests: XCTestCase {
     XCTAssertEqual(0, vest.quality)
   }
 
+  func testDecrementDay() {
+    let item = Item(name: "+5 Dexterity Vest", sellIn: 10, quality: 20)
+    let behaviour = ItemBehaviour()
+    behaviour.decrementSellDate(item)
+    XCTAssertEqual(9, item.sellIn)
+  }
+
 }

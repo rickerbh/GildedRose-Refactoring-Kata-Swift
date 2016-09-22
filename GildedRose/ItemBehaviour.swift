@@ -26,4 +26,8 @@ class ItemBehaviour {
     item.quality = quality
   }
 
+  func decrementSellDate(_ item: Item) {
+    item.sellIn = item.sellIn - 1
+  }
+
 }

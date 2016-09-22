@@ -10,6 +10,7 @@ public class GildedRose {
     for i in 0..<items.count {
       let itemBehaviour = BehaviourFactory.getBehaviour(items[i])
       itemBehaviour.updateQualityPreDateChange(items[i])
+      itemBehaviour.decrementSellDate(items[i])
 
       if items[i].sellIn < 0 {
         if items[i].name == "Aged Brie" {
@@ -36,13 +37,6 @@ public class GildedRose {
       return
     }
     item.quality = item.quality + 1
-  }
-
-  internal func decrementSellDate(_ item: Item) {
-    guard item.name != "Sulfuras, Hand of Ragnaros" else {
-      return
-    }
-    item.sellIn = item.sellIn - 1
   }
 
   internal func processExpiredItem(_ item: Item) {
