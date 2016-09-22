@@ -10,17 +10,15 @@ public class GildedRose {
     for i in 0..<items.count {
       if (items[i].name == "Aged Brie" ||
         items[i].name == "Backstage passes to a TAFKAL80ETC concert") {
-        if (items[i].quality < 50) {
-          incrementQuality(items[i])
+        incrementQuality(items[i])
 
-          if (items[i].name == "Backstage passes to a TAFKAL80ETC concert") {
-            if (items[i].sellIn < 11) {
-              incrementQuality(items[i])
-            }
+        if (items[i].name == "Backstage passes to a TAFKAL80ETC concert") {
+          if (items[i].sellIn < 11) {
+            incrementQuality(items[i])
+          }
 
-            if (items[i].sellIn < 6) {
-              incrementQuality(items[i])
-            }
+          if (items[i].sellIn < 6) {
+            incrementQuality(items[i])
           }
         }
       } else {
@@ -66,5 +64,5 @@ public class GildedRose {
     }
     item.sellIn = item.sellIn - 1
   }
-
+  
 }
