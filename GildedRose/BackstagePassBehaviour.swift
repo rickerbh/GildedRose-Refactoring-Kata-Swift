@@ -23,4 +23,11 @@ class BackstagePassBehaviour: ItemBehaviour {
     setQuality(item, quality: item.quality + qualityIncrease)
   }
 
+  override func processExpiredItem(_ item: Item) {
+    guard item.sellIn < 0 else {
+      return
+    }
+    setQuality(item, quality: 0)
+  }
+
 }

@@ -37,5 +37,18 @@ class BackstagePassBehaviourTests: XCTestCase {
     XCTAssertEqual(7, newerPass.quality)
   }
 
+  func testExpiredItemProcessingGives0Quality() {
+    let item = Item(name: "Backstage passes to a TAFKAL80ETC concert", sellIn: -5, quality: 5)
+    let behaviour = BackstagePassBehaviour()
+    behaviour.processExpiredItem(item)
+    XCTAssertEqual(0, item.quality)
+  }
+
+  func testNonExpiredItemUnaffectedByProcessingExpired() {
+    let item = Item(name: "Backstage passes to a TAFKAL80ETC concert", sellIn: 15, quality: 5)
+    let behaviour = BackstagePassBehaviour()
+    behaviour.processExpiredItem(item)
+    XCTAssertEqual(5, item.quality)
+  }
 
 }
