@@ -9,23 +9,19 @@ public class GildedRose {
     public func updateQuality() {
         
         for i in 0..<items.count {
-            if (items[i].name != "Aged Brie" && items[i].name != "Backstage passes to a TAFKAL80ETC concert") {
+          if (items[i].name != "Aged Brie" && items[i].name != "Backstage passes to a TAFKAL80ETC concert") {
               decrementQuality(items[i])
             } else {
                 if (items[i].quality < 50) {
-                    items[i].quality = items[i].quality + 1
-                    
+                  incrementQuality(items[i])
+
                     if (items[i].name == "Backstage passes to a TAFKAL80ETC concert") {
                         if (items[i].sellIn < 11) {
-                            if (items[i].quality < 50) {
-                                items[i].quality = items[i].quality + 1
-                            }
+                          incrementQuality(items[i])
                         }
                         
                         if (items[i].sellIn < 6) {
-                            if (items[i].quality < 50) {
-                                items[i].quality = items[i].quality + 1
-                            }
+                          incrementQuality(items[i])
                         }
                     }
                 }
@@ -41,9 +37,7 @@ public class GildedRose {
                         items[i].quality = items[i].quality - items[i].quality
                     }
                 } else {
-                    if (items[i].quality < 50) {
-                        items[i].quality = items[i].quality + 1
-                    }
+                  incrementQuality(items[i])
                 }
             }
         }
@@ -57,6 +51,13 @@ public class GildedRose {
       return
     }
     item.quality = item.quality - 1
+  }
+
+  internal func incrementQuality(_ item: Item) {
+    guard item.quality < 50 else {
+      return
+    }
+    item.quality = item.quality + 1
   }
 
   internal func decrementSellDate(_ item: Item) {

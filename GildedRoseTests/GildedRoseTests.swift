@@ -76,10 +76,8 @@ class GildedRoseTests: XCTestCase {
   }
 
   func testQualityNeverLessThan0() {
-    let vest = Item(name: "+5 Dexterity Vest", sellIn: 10, quality: 1)
+    let vest = Item(name: "+5 Dexterity Vest", sellIn: 10, quality: 0)
     let app = GildedRose(items: [])
-    app.decrementQuality(vest)
-    XCTAssertEqual(0, vest.quality)
     app.decrementQuality(vest)
     XCTAssertEqual(0, vest.quality)
   }
@@ -89,6 +87,20 @@ class GildedRoseTests: XCTestCase {
     let app = GildedRose(items: [])
     app.decrementQuality(sulfuras)
     XCTAssertEqual(80, sulfuras.quality)
+  }
+
+  func testQualityIsIncremented() {
+    let brie = Item(name: "Aged Brie", sellIn: 2, quality: 0)
+    let app = GildedRose(items: [])
+    app.incrementQuality(brie)
+    XCTAssertEqual(1, brie.quality)
+  }
+
+  func testQualityNeverGoesAbove50() {
+    let brie = Item(name: "Aged Brie", sellIn: 2, quality: 50)
+    let app = GildedRose(items: [])
+    app.incrementQuality(brie)
+    XCTAssertEqual(50, brie.quality)
   }
 
 }
