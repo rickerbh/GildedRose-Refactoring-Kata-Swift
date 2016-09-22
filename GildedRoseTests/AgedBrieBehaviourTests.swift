@@ -11,10 +11,24 @@ import XCTest
 class AgedBrieBehaviourTests: XCTestCase {
 
   func testItemImprovesPreDateChange() {
-    let brie = Item(name: "Aged Brie", sellIn: 10, quality: 0)
+    let item = Item(name: "Aged Brie", sellIn: 10, quality: 0)
     let behaviour = AgedBrieBehaviour()
-    behaviour.updateQualityPreDateChange(brie)
-    XCTAssertEqual(1, brie.quality)
+    behaviour.updateQualityPreDateChange(item)
+    XCTAssertEqual(1, item.quality)
+  }
+
+  func testExpiredItemProcessingGivesExtraQuality() {
+    let item = Item(name: "Aged Brie", sellIn: -5, quality: 10)
+    let behaviour = AgedBrieBehaviour()
+    behaviour.processExpiredItem(item)
+    XCTAssertEqual(11, item.quality)
+  }
+
+  func testNonExpiredItemUnaffectedByProcessingExpired() {
+    let item = Item(name: "Aged Brie", sellIn: 10, quality: 5)
+    let behaviour = AgedBrieBehaviour()
+    behaviour.processExpiredItem(item)
+    XCTAssertEqual(5, item.quality)
   }
 
 }
