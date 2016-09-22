@@ -16,6 +16,9 @@
 		0728402C1D948D3E0021D996 /* BackstagePassBehaviourTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0728402B1D948D3E0021D996 /* BackstagePassBehaviourTests.swift */; };
 		0728402E1D948D880021D996 /* BackstagePassBehaviour.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0728402D1D948D880021D996 /* BackstagePassBehaviour.swift */; };
 		0728402F1D948D880021D996 /* BackstagePassBehaviour.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0728402D1D948D880021D996 /* BackstagePassBehaviour.swift */; };
+		072840311D948ED20021D996 /* BehaviourFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072840301D948ED20021D996 /* BehaviourFactory.swift */; };
+		072840321D948ED20021D996 /* BehaviourFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072840301D948ED20021D996 /* BehaviourFactory.swift */; };
+		072840341D948EDD0021D996 /* BehaviourFactoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072840331D948EDD0021D996 /* BehaviourFactoryTests.swift */; };
 		072840361D9491D80021D996 /* SulfurasBehaviourTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072840351D9491D80021D996 /* SulfurasBehaviourTests.swift */; };
 		072840381D9492460021D996 /* SulfurasBehaviour.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072840371D9492460021D996 /* SulfurasBehaviour.swift */; };
 		072840391D9492460021D996 /* SulfurasBehaviour.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072840371D9492460021D996 /* SulfurasBehaviour.swift */; };
@@ -47,6 +50,8 @@
 		072840281D948CC90021D996 /* AgedBrieBehaviour.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AgedBrieBehaviour.swift; sourceTree = "<group>"; };
 		0728402B1D948D3E0021D996 /* BackstagePassBehaviourTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackstagePassBehaviourTests.swift; sourceTree = "<group>"; };
 		0728402D1D948D880021D996 /* BackstagePassBehaviour.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackstagePassBehaviour.swift; sourceTree = "<group>"; };
+		072840301D948ED20021D996 /* BehaviourFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BehaviourFactory.swift; sourceTree = "<group>"; };
+		072840331D948EDD0021D996 /* BehaviourFactoryTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BehaviourFactoryTests.swift; sourceTree = "<group>"; };
 		072840351D9491D80021D996 /* SulfurasBehaviourTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SulfurasBehaviourTests.swift; sourceTree = "<group>"; };
 		072840371D9492460021D996 /* SulfurasBehaviour.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SulfurasBehaviour.swift; sourceTree = "<group>"; };
 		074600EA1D929B9C00870283 /* GildedRose */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = GildedRose; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -104,6 +109,7 @@
 				072840231D948BF10021D996 /* ItemBehaviour.swift */,
 				072840281D948CC90021D996 /* AgedBrieBehaviour.swift */,
 				0728402D1D948D880021D996 /* BackstagePassBehaviour.swift */,
+				072840301D948ED20021D996 /* BehaviourFactory.swift */,
 				072840371D9492460021D996 /* SulfurasBehaviour.swift */,
 			);
 			path = GildedRose;
@@ -118,6 +124,7 @@
 				072840211D948B4B0021D996 /* ItemBehaviourTests.swift */,
 				072840261D948C7C0021D996 /* AgedBrieBehaviourTests.swift */,
 				0728402B1D948D3E0021D996 /* BackstagePassBehaviourTests.swift */,
+				072840331D948EDD0021D996 /* BehaviourFactoryTests.swift */,
 				072840351D9491D80021D996 /* SulfurasBehaviourTests.swift */,
 			);
 			path = GildedRoseTests;
@@ -219,6 +226,7 @@
 				0728402E1D948D880021D996 /* BackstagePassBehaviour.swift in Sources */,
 				072840291D948CC90021D996 /* AgedBrieBehaviour.swift in Sources */,
 				072840381D9492460021D996 /* SulfurasBehaviour.swift in Sources */,
+				072840311D948ED20021D996 /* BehaviourFactory.swift in Sources */,
 				072840241D948BF10021D996 /* ItemBehaviour.swift in Sources */,
 				074600F71D929BD800870283 /* Item.swift in Sources */,
 			);
@@ -233,7 +241,9 @@
 				072840271D948C7C0021D996 /* AgedBrieBehaviourTests.swift in Sources */,
 				074600FF1D92A1B500870283 /* GildedRoseTests.swift in Sources */,
 				074601071D92A25700870283 /* Item.swift in Sources */,
+				072840321D948ED20021D996 /* BehaviourFactory.swift in Sources */,
 				0728402A1D948CC90021D996 /* AgedBrieBehaviour.swift in Sources */,
+				072840341D948EDD0021D996 /* BehaviourFactoryTests.swift in Sources */,
 				072840251D948C3D0021D996 /* ItemBehaviour.swift in Sources */,
 				072840221D948B4B0021D996 /* ItemBehaviourTests.swift in Sources */,
 				074601061D92A23300870283 /* GildedRose.swift in Sources */,
