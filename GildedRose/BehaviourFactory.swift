@@ -16,6 +16,8 @@ struct BehaviourFactory {
       return AgedBrieBehaviour()
     case "Backstage passes to a TAFKAL80ETC concert":
       return BackstagePassBehaviour()
+    case "Conjured Mana Cake":
+      return ConjuredBehaviour()
     case "Sulfuras, Hand of Ragnaros":
       return SulfurasBehaviour()
     default:
