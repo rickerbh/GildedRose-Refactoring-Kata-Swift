@@ -30,4 +30,11 @@ class ItemBehaviour {
     item.sellIn = item.sellIn - 1
   }
 
+  func processExpiredItem(_ item: Item) {
+    guard item.sellIn < 0 else {
+      return
+    }
+    setQuality(item, quality: item.quality - 1)
+  }
+
 }

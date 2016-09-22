@@ -40,4 +40,18 @@ class ItemBehaviourTests: XCTestCase {
     XCTAssertEqual(9, item.sellIn)
   }
 
+  func testExpiredItemProcessingDecrementsAgain() {
+    let item = Item(name: "+5 Dexterity Vest", sellIn: -1, quality: 20)
+    let behaviour = ItemBehaviour()
+    behaviour.processExpiredItem(item)
+    XCTAssertEqual(19, item.quality)
+  }
+
+  func testNonExpiredItemUnaffectedByProcessingExpired() {
+    let item = Item(name: "+5 Dexterity Vest", sellIn: 10, quality: 20)
+    let behaviour = ItemBehaviour()
+    behaviour.processExpiredItem(item)
+    XCTAssertEqual(20, item.quality)
+  }
+
 }
