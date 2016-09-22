@@ -67,4 +67,28 @@ class GildedRoseTests: XCTestCase {
     app.decrementSellDate(sulfuras)
     XCTAssertEqual(-1, sulfuras.sellIn)
   }
+
+  func testQualityIsDecremented() {
+    let vest = Item(name: "+5 Dexterity Vest", sellIn: 10, quality: 20)
+    let app = GildedRose(items: [])
+    app.decrementQuality(vest)
+    XCTAssertEqual(19, vest.quality)
+  }
+
+  func testQualityNeverLessThan0() {
+    let vest = Item(name: "+5 Dexterity Vest", sellIn: 10, quality: 1)
+    let app = GildedRose(items: [])
+    app.decrementQuality(vest)
+    XCTAssertEqual(0, vest.quality)
+    app.decrementQuality(vest)
+    XCTAssertEqual(0, vest.quality)
+  }
+
+  func testSulfurasQualityNeverDecrements() {
+    let sulfuras = Item(name: "Sulfuras, Hand of Ragnaros", sellIn: -1, quality: 80)
+    let app = GildedRose(items: [])
+    app.decrementQuality(sulfuras)
+    XCTAssertEqual(80, sulfuras.quality)
+  }
+
 }
