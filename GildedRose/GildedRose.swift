@@ -8,24 +8,8 @@ public class GildedRose {
   public func updateQuality() {
 
     for i in 0..<items.count {
-      if (items[i].name == "Aged Brie" ||
-        items[i].name == "Backstage passes to a TAFKAL80ETC concert") {
-        incrementQuality(items[i])
-
-        if (items[i].name == "Backstage passes to a TAFKAL80ETC concert") {
-          if (items[i].sellIn < 11) {
-            incrementQuality(items[i])
-          }
-
-          if (items[i].sellIn < 6) {
-            incrementQuality(items[i])
-          }
-        }
-      } else {
-        decrementQuality(items[i])
-      }
-
-      decrementSellDate(items[i])
+      let itemBehaviour = BehaviourFactory.getBehaviour(items[i])
+      itemBehaviour.updateQualityPreDateChange(items[i])
 
       if items[i].sellIn < 0 {
         if items[i].name == "Aged Brie" {
