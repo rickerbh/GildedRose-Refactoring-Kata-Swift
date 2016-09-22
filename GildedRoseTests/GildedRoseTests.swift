@@ -103,4 +103,18 @@ class GildedRoseTests: XCTestCase {
     XCTAssertEqual(50, brie.quality)
   }
 
+  func testPostSaleDateBrieIncementsQuality() {
+    let brie = Item(name: "Aged Brie", sellIn: -1, quality: 0)
+    let app = GildedRose(items: [])
+    app.processExpiredItem(brie)
+    XCTAssertEqual(2, brie.quality)
+  }
+
+  func testPostSaleDateTicketsHave0Quality() {
+    let tickets = Item(name: "Backstage passes to a TAFKAL80ETC concert", sellIn: -1, quality: 20)
+    let app = GildedRose(items: [])
+    app.processExpiredItem(tickets)
+    XCTAssertEqual(0, tickets.quality)
+  }
+
 }

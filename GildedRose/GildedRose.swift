@@ -27,15 +27,11 @@ public class GildedRose {
 
       decrementSellDate(items[i])
 
-      if (items[i].sellIn < 0) {
+      if items[i].sellIn < 0 {
         if items[i].name == "Aged Brie" {
           incrementQuality(items[i])
         } else {
-          if (items[i].name == "Backstage passes to a TAFKAL80ETC concert") {
-            items[i].quality = items[i].quality - items[i].quality
-          } else {
-            decrementQuality(items[i])
-          }
+          processExpiredItem(items[i])
         }
       }
     }
@@ -63,6 +59,21 @@ public class GildedRose {
       return
     }
     item.sellIn = item.sellIn - 1
+  }
+
+  internal func processExpiredItem(_ item: Item) {
+    guard item.sellIn < 0 else {
+      return
+    }
+
+    if item.name == "Aged Brie" {
+      incrementQuality(item)
+      incrementQuality(item)
+    } else if item.name == "Backstage passes to a TAFKAL80ETC concert" {
+      item.quality = 0
+    } else {
+      decrementQuality(item)
+    }
   }
   
 }
