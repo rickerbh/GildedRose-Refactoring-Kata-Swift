@@ -10,6 +10,9 @@
 		072840221D948B4B0021D996 /* ItemBehaviourTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072840211D948B4B0021D996 /* ItemBehaviourTests.swift */; };
 		072840241D948BF10021D996 /* ItemBehaviour.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072840231D948BF10021D996 /* ItemBehaviour.swift */; };
 		072840251D948C3D0021D996 /* ItemBehaviour.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072840231D948BF10021D996 /* ItemBehaviour.swift */; };
+		072840271D948C7C0021D996 /* AgedBrieBehaviourTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072840261D948C7C0021D996 /* AgedBrieBehaviourTests.swift */; };
+		072840291D948CC90021D996 /* AgedBrieBehaviour.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072840281D948CC90021D996 /* AgedBrieBehaviour.swift */; };
+		0728402A1D948CC90021D996 /* AgedBrieBehaviour.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072840281D948CC90021D996 /* AgedBrieBehaviour.swift */; };
 		074600EE1D929B9C00870283 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074600ED1D929B9C00870283 /* main.swift */; };
 		074600F71D929BD800870283 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074600F51D929BD800870283 /* Item.swift */; };
 		074600FF1D92A1B500870283 /* GildedRoseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074600FE1D92A1B500870283 /* GildedRoseTests.swift */; };
@@ -34,6 +37,8 @@
 /* Begin PBXFileReference section */
 		072840211D948B4B0021D996 /* ItemBehaviourTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemBehaviourTests.swift; sourceTree = "<group>"; };
 		072840231D948BF10021D996 /* ItemBehaviour.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemBehaviour.swift; sourceTree = "<group>"; };
+		072840261D948C7C0021D996 /* AgedBrieBehaviourTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AgedBrieBehaviourTests.swift; sourceTree = "<group>"; };
+		072840281D948CC90021D996 /* AgedBrieBehaviour.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AgedBrieBehaviour.swift; sourceTree = "<group>"; };
 		074600EA1D929B9C00870283 /* GildedRose */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = GildedRose; sourceTree = BUILT_PRODUCTS_DIR; };
 		074600ED1D929B9C00870283 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		074600F41D929BD800870283 /* GildedRose.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GildedRose.swift; sourceTree = "<group>"; };
@@ -87,6 +92,7 @@
 				074600F51D929BD800870283 /* Item.swift */,
 				074600ED1D929B9C00870283 /* main.swift */,
 				072840231D948BF10021D996 /* ItemBehaviour.swift */,
+				072840281D948CC90021D996 /* AgedBrieBehaviour.swift */,
 			);
 			path = GildedRose;
 			sourceTree = "<group>";
@@ -98,6 +104,7 @@
 				074600FE1D92A1B500870283 /* GildedRoseTests.swift */,
 				074601001D92A1B500870283 /* Info.plist */,
 				072840211D948B4B0021D996 /* ItemBehaviourTests.swift */,
+				072840261D948C7C0021D996 /* AgedBrieBehaviourTests.swift */,
 			);
 			path = GildedRoseTests;
 			sourceTree = "<group>";
@@ -195,6 +202,7 @@
 			files = (
 				074600EE1D929B9C00870283 /* main.swift in Sources */,
 				074601091D92A26500870283 /* GildedRose.swift in Sources */,
+				072840291D948CC90021D996 /* AgedBrieBehaviour.swift in Sources */,
 				072840241D948BF10021D996 /* ItemBehaviour.swift in Sources */,
 				074600F71D929BD800870283 /* Item.swift in Sources */,
 			);
@@ -204,8 +212,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				072840271D948C7C0021D996 /* AgedBrieBehaviourTests.swift in Sources */,
 				074600FF1D92A1B500870283 /* GildedRoseTests.swift in Sources */,
 				074601071D92A25700870283 /* Item.swift in Sources */,
+				0728402A1D948CC90021D996 /* AgedBrieBehaviour.swift in Sources */,
 				072840251D948C3D0021D996 /* ItemBehaviour.swift in Sources */,
 				072840221D948B4B0021D996 /* ItemBehaviourTests.swift in Sources */,
 				074601061D92A23300870283 /* GildedRose.swift in Sources */,
