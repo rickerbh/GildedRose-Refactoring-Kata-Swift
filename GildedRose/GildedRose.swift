@@ -34,11 +34,9 @@ public class GildedRose {
                     }
                 }
             }
-            
-            if (items[i].name != "Sulfuras, Hand of Ragnaros") {
-                items[i].sellIn = items[i].sellIn - 1
-            }
-            
+
+          decrementSellDate(items[i])
+
             if (items[i].sellIn < 0) {
                 if (items[i].name != "Aged Brie") {
                     if (items[i].name != "Backstage passes to a TAFKAL80ETC concert") {
@@ -58,4 +56,12 @@ public class GildedRose {
             }
         }
     }
+
+  internal func decrementSellDate(_ item: Item) {
+    guard item.name != "Sulfuras, Hand of Ragnaros" else {
+      return
+    }
+    item.sellIn = item.sellIn - 1
+  }
+
 }
