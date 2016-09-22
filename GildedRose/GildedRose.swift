@@ -6,11 +6,11 @@ public class GildedRose {
   }
 
   public func updateQuality() {
-    for i in 0..<items.count {
-      let itemBehaviour = BehaviourFactory.getBehaviour(items[i])
-      itemBehaviour.updateQualityPreDateChange(items[i])
-      itemBehaviour.decrementSellDate(items[i])
-      itemBehaviour.processExpiredItem(items[i])
+    let _ = items.map { item in
+      let itemBehaviour = BehaviourFactory.getBehaviour(item)
+      itemBehaviour.updateQualityPreDateChange(item)
+      itemBehaviour.decrementSellDate(item)
+      itemBehaviour.processExpiredItem(item)
     }
   }
 }
