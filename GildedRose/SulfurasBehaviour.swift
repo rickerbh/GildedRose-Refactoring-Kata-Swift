@@ -17,4 +17,8 @@ class SulfurasBehaviour: ItemBehaviour {
     return
   }
 
+  override func processExpiredItem(_ item: Item) {
+    return
+  }
+
 }
